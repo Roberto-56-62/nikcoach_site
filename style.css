@@ -149,7 +149,7 @@ font-size:15px;
 
 
 
-/* ICONE */
+/* ICONE MENU TELEGRAM */
 
 .telegram-menu i{
 
@@ -232,7 +232,7 @@ color:#1d2c4d;
 
 
 
-/* ICONE CONTATTI */
+/* ICONE CONTATTI FONT AWESOME */
 
 .contatto i{
 
@@ -242,7 +242,22 @@ font-size:22px;
 
 
 
-/* LINK PRIVACY */
+/* ICONA WHATSAPP SVG */
+
+.icon-whatsapp{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:22px;
+height:22px;
+
+}
+
+
+
+/* LINK CONTATTI */
 
 .contatto a{
 
@@ -317,5 +332,11 @@ font-size:20px;
 
 }
 
+.icon-whatsapp{
+
+width:20px;
+height:20px;
+
+}
 
 }
