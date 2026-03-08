@@ -9,71 +9,110 @@
 
 <style>
 
+*{
+box-sizing:border-box;
+}
+
 body{
-font-family: Arial, Helvetica, sans-serif;
 margin:0;
-background:#0c1b2a;
+font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+background:linear-gradient(180deg,#0a1624,#0f2438);
 color:white;
 }
 
 .container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
-padding:40px;
+padding:40px 20px;
 }
 
-h1{
-font-size:48px;
-margin-bottom:10px;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:60px;
 }
 
-h2{
-margin-top:60px;
-font-size:32px;
+.logo{
+font-weight:bold;
+font-size:20px;
 }
 
-p{
-font-size:18px;
-color:#c7d1dc;
+.nav-links a{
+margin-left:20px;
+color:#9db1c4;
+text-decoration:none;
+font-size:14px;
 }
 
 .hero{
-display:flex;
-flex-wrap:wrap;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
 align-items:center;
-justify-content:space-between;
 }
 
-.hero-text{
-max-width:520px;
+.hero h1{
+font-size:48px;
+margin:0 0 20px 0;
+}
+
+.hero p{
+color:#a8bed2;
+font-size:18px;
+line-height:1.6;
+}
+
+.features{
+margin-top:20px;
+}
+
+.features p{
+margin:6px 0;
+}
+
+.cta{
+margin-top:30px;
 }
 
 .button{
 display:inline-block;
-background:#2d7df6;
 padding:16px 26px;
 border-radius:8px;
-color:white;
 text-decoration:none;
 font-weight:bold;
-margin-top:20px;
+margin-right:10px;
 }
 
-.button:hover{
-background:#1f63c9;
+.telegram{
+background:#2AABEE;
+color:white;
 }
 
-.features{
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.section{
+margin-top:100px;
+}
+
+.grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
 margin-top:40px;
 }
 
-.box{
-background:#16293d;
+.card{
+background:#13283d;
 padding:30px;
-border-radius:10px;
+border-radius:12px;
+}
+
+.card h3{
+margin-top:0;
 }
 
 .example{
@@ -84,16 +123,44 @@ margin-top:20px;
 }
 
 .footer{
-margin-top:80px;
+margin-top:100px;
+padding-top:40px;
+border-top:1px solid #20364d;
+color:#8fa4b7;
 font-size:14px;
-color:#8ca2b5;
 }
 
-.contact{
-margin-top:30px;
+.lang{
+cursor:pointer;
+color:#2AABEE;
+font-weight:bold;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
+
+<script>
+
+function setLang(lang){
+
+document.querySelectorAll("[data-it]").forEach(el=>{
+el.innerHTML = el.getAttribute("data-"+lang)
+})
+
+}
+
+</script>
 
 </head>
 
@@ -101,34 +168,62 @@ margin-top:30px;
 
 <div class="container">
 
+<nav>
+
+<div class="logo">Nik Coach</div>
+
+<div class="nav-links">
+<span class="lang" onclick="setLang('it')">IT</span> |
+<span class="lang" onclick="setLang('en')">EN</span>
+</div>
+
+</nav>
+
 <!-- HERO -->
 
 <div class="hero">
 
-<div class="hero-text">
+<div>
 
-<h1>Leggi il mercato<br>prima di decidere</h1>
+<h1
+data-it="Leggi il mercato prima di decidere"
+data-en="Read the market before deciding"
+>
+Leggi il mercato prima di decidere
+</h1>
 
-<p>
-Nik Coach non ti dà segnali.<br>
-Ti aiuta a capire il contesto di mercato.
+<p
+data-it="Nik Coach non ti dà segnali. Ti aiuta a capire il contesto in cui stai operando."
+data-en="Nik Coach does not give signals. It helps you understand the market context."
+>
+Nik Coach non ti dà segnali. Ti aiuta a capire il contesto in cui stai operando.
 </p>
 
-<p>
-✔ Regime di mercato<br>
-✔ Clima tra gli asset<br>
-✔ Struttura multi-timeframe
-</p>
+<div class="features">
 
-<a class="button" href="https://t.me/NikCoachBot?start=landing" target="_blank">
+<p>✔ Regime di mercato</p>
+<p>✔ Clima tra gli asset</p>
+<p>✔ Struttura multi-timeframe</p>
+
+</div>
+
+<div class="cta">
+
+<a class="button telegram"
+href="https://t.me/NikCoachBot?start=landing"
+target="_blank"
+data-it="Prova gratis su Telegram"
+data-en="Try it free on Telegram"
+>
 Prova gratis su Telegram
 </a>
 
-<br>
-
-<a class="button" style="background:#25D366"
+<a class="button whatsapp"
 href="https://wa.me/393403369834?text=Ciao%20vorrei%20informazioni%20su%20Nik%20Coach"
-target="_blank">
+target="_blank"
+data-it="Contattaci su WhatsApp"
+data-en="Contact us on WhatsApp"
+>
 Contattaci su WhatsApp
 </a>
 
@@ -136,133 +231,160 @@ Contattaci su WhatsApp
 
 </div>
 
+<div>
+
+<img src="https://i.imgur.com/4YQZ4sL.png" style="width:100%;border-radius:12px">
+
+</div>
+
+</div>
+
 <!-- COS'E -->
 
-<h2>Cos'è Nik Coach</h2>
+<div class="section">
 
-<div class="features">
+<h2
+data-it="Cos'è Nik Coach"
+data-en="What is Nik Coach"
+>
+Cos'è Nik Coach
+</h2>
 
-<div class="box">
+<div class="grid">
 
-<p>
+<div class="card">
+
+<p
+data-it="Nik è un sistema strutturale di lettura del mercato."
+data-en="Nik is a structural market reading system."
+>
 Nik è un sistema strutturale di lettura del mercato.
 </p>
 
-<p>
-✔ Regime dominante<br>
-✔ Stress di mercato<br>
-✔ Coerenza tra asset<br>
-✔ Fase strutturale degli strumenti
-</p>
+<p>✔ Regime dominante</p>
+<p>✔ Stress di mercato</p>
+<p>✔ Coerenza tra asset</p>
+<p>✔ Fase strutturale degli strumenti</p>
 
-<p>
-Ti restituisce una fotografia del contesto aggiornata ogni 15 minuti.
-</p>
-
-</div>
-
-<div class="box">
-
-<h3>Perché usare Nik</h3>
-
-<p>
-✔ Capisci quando il mercato è forte o fragile
-</p>
-
-<p>
-✔ Scopri quali asset stanno guidando il movimento
-</p>
-
-<p>
-✔ Eviti operazioni contro trend
-</p>
-
-<p>
-✔ Sai quando è meglio aspettare
+<p
+data-it="Contesto aggiornato ogni 15 minuti."
+data-en="Context updated every 15 minutes."
+>
+Contesto aggiornato ogni 15 minuti.
 </p>
 
 </div>
 
-</div>
+<div class="card">
 
-<!-- COME FUNZIONA -->
+<h3
+data-it="Perché usarlo"
+data-en="Why use it"
+>
+Perché usarlo
+</h3>
 
-<h2>Come funziona</h2>
-
-<div class="features">
-
-<div class="box">
-
-<p><b>1</b> Scrivi una domanda su Telegram</p>
-
-<p>
-Esempi:
+<p
+data-it="Capisci quando il mercato è forte o fragile"
+data-en="Understand when the market is strong or fragile"
+>
+Capisci quando il mercato è forte o fragile
 </p>
 
-<p>
-"Che clima c'è sui mercati?"
+<p
+data-it="Scopri quali asset guidano il movimento"
+data-en="Discover which assets are driving the move"
+>
+Scopri quali asset guidano il movimento
 </p>
 
-<p>
-"EURUSD che fase sta vivendo?"
+<p
+data-it="Eviti operazioni contro trend"
+data-en="Avoid trading against the trend"
+>
+Eviti operazioni contro trend
 </p>
 
-</div>
-
-<div class="box">
-
-<p><b>2</b> Nik analizza il contesto</p>
-
-<p><b>3</b> Ricevi una risposta strutturale e chiara</p>
+<p
+data-it="Sai quando è meglio aspettare"
+data-en="Know when it's better to wait"
+>
+Sai quando è meglio aspettare
+</p>
 
 </div>
 
 </div>
 
-<!-- ESEMPIO RISPOSTA -->
+</div>
 
-<h2>Esempio di risposta</h2>
+<!-- ESEMPIO -->
+
+<div class="section">
+
+<h2
+data-it="Esempio di risposta"
+data-en="Example response"
+>
+Esempio di risposta
+</h2>
 
 <div class="example">
 
 <p><b>Domanda</b></p>
 
-<p>
+<p
+data-it="Che clima c'è sui mercati?"
+data-en="What is the current market climate?"
+>
 Che clima c'è sui mercati?
 </p>
 
-<p><b>Risposta Nik</b></p>
+<p><b>Nik</b></p>
 
-<p>
-Il contesto attuale mostra una struttura fragile.<br>
-Gli asset difensivi stanno guidando il movimento.<br>
-Il mercato resta sensibile a shock macro.
-</p>
-
-<p>
-Meglio evitare operazioni contro trend e attendere conferme.
+<p
+data-it="Il contesto mostra una struttura fragile. Gli asset difensivi stanno guidando il movimento e il mercato resta sensibile a shock macro."
+data-en="The context shows a fragile structure. Defensive assets are leading the move and the market remains sensitive to macro shocks."
+>
+Il contesto mostra una struttura fragile. Gli asset difensivi stanno guidando il movimento.
 </p>
 
 </div>
 
-<!-- CTA -->
+</div>
 
-<h2>Riceverai solo chiarezza</h2>
+<!-- CTA FINALE -->
 
-<p>
-Nessun segnale operativo.<br>
-Solo contesto, sintesi e direzione.
+<div class="section">
+
+<h2
+data-it="Riceverai solo chiarezza"
+data-en="You will receive clarity only"
+>
+Riceverai solo chiarezza
+</h2>
+
+<p
+data-it="Nessun segnale operativo. Solo contesto, sintesi e direzione."
+data-en="No trading signals. Only context, synthesis and direction."
+>
+Nessun segnale operativo. Solo contesto, sintesi e direzione.
 </p>
 
-<a class="button" href="https://t.me/NikCoachBot?start=landing" target="_blank">
+<a class="button telegram"
+href="https://t.me/NikCoachBot?start=landing"
+target="_blank"
+data-it="Apri Nik su Telegram"
+data-en="Open Nik on Telegram"
+>
 Apri Nik su Telegram
 </a>
 
-<!-- CONTATTI -->
+</div>
 
-<div class="contact">
+<!-- FOOTER -->
 
-<h2>Contatti</h2>
+<div class="footer">
 
 <p>Email: info@nikcoach.it</p>
 
@@ -270,19 +392,9 @@ Apri Nik su Telegram
 
 <p>WhatsApp: +39 3403369834</p>
 
-</div>
-
-<!-- DISCLAIMER -->
-
-<div class="footer">
-
 <p>
-Nik Coach è un sistema digitale di supporto decisionale.<br>
-Non fornisce consulenza finanziaria e non rilascia segnali operativi.
-</p>
-
-<p>
-Ogni decisione resta responsabilità dell'utente.
+Nik Coach è un sistema digitale di supporto decisionale.
+Non fornisce consulenza finanziaria.
 </p>
 
 </div>
