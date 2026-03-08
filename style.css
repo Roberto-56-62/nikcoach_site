@@ -258,42 +258,28 @@ color:#1d2c4d;
 @media (max-width:768px){
 
 .topbar{
-
 padding:10px 20px;
-
 }
 
 .landing{
-
 max-width:100%;
 margin:10px auto;
-
 }
 
 .logo img{
-
 height:55px;
-
 }
 
-
-
-/* TELEGRAM MOBILE */
+/* TELEGRAM */
 
 .telegram-area{
-
 top:260px;
-width:300px;
-
+width:280px;
 }
 
 .telegram-menu{
-
 flex-direction:column;
-
 }
-
-
 
 /* FOOTER MOBILE */
 
@@ -302,13 +288,34 @@ flex-direction:column;
 max-width:100%;
 margin:20px auto;
 
+padding:25px 20px;
+
+}
+
+.footer-contatti h2{
+font-size:24px;
 }
 
 .contatti-grid{
 
 flex-direction:column;
-gap:15px;
+align-items:center;
+
+gap:18px;
 
 }
+
+.contatto{
+
+font-size:17px;
+
+}
+
+.contatto i{
+
+font-size:20px;
+
+}
+
 
 }
