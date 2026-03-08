@@ -7,6 +7,7 @@ background:#ffffff;
 }
 
 
+
 /* HEADER */
 
 .topbar{
@@ -15,43 +16,61 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:15px 40px;
+max-width:900px;
+margin:auto;
 
-background:white;
-border-bottom:1px solid #e6e6e6;
+padding:15px 0;
 
 }
+
 
 
 /* LOGO */
 
-.logo{
+.logo img{
 
-font-weight:bold;
-font-size:18px;
+height:70px;
+
+}
+
+
+
+/* BANDIERE */
+
+.lang{
+
+display:flex;
+gap:12px;
 
 }
 
 
-/* LANGUAGE */
+.lang img{
 
-.lang a{
-
-text-decoration:none;
-color:#2c4b8c;
-font-weight:bold;
+width:32px;
+cursor:pointer;
+transition:0.2s;
 
 }
+
+
+.lang img:hover{
+
+transform:scale(1.1);
+
+}
+
 
 
 /* LANDING */
 
 .landing{
 
-max-width:900px;   /* circa 3/4 monitor */
-margin:auto;
+max-width:900px;
+margin:20px auto;
 
 }
+
 
 .landing img{
 
@@ -61,19 +80,27 @@ display:block;
 }
 
 
+
 /* MOBILE */
 
 @media (max-width:768px){
 
-.landing{
-
-max-width:100%;
-
-}
-
 .topbar{
 
 padding:10px 20px;
+
+}
+
+.landing{
+
+max-width:100%;
+margin:10px auto;
+
+}
+
+.logo img{
+
+height:55px;
 
 }
 
