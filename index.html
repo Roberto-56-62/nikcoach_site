@@ -5,401 +5,160 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nik Coach — Leggi il mercato prima di decidere</title>
+<title>Nik Coach</title>
 
-<style>
-
-*{
-box-sizing:border-box;
-}
-
-body{
-margin:0;
-font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-background:linear-gradient(180deg,#0a1624,#0f2438);
-color:white;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:60px;
-}
-
-.logo{
-font-weight:bold;
-font-size:20px;
-}
-
-.nav-links a{
-margin-left:20px;
-color:#9db1c4;
-text-decoration:none;
-font-size:14px;
-}
-
-.hero{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.hero h1{
-font-size:48px;
-margin:0 0 20px 0;
-}
-
-.hero p{
-color:#a8bed2;
-font-size:18px;
-line-height:1.6;
-}
-
-.features{
-margin-top:20px;
-}
-
-.features p{
-margin:6px 0;
-}
-
-.cta{
-margin-top:30px;
-}
-
-.button{
-display:inline-block;
-padding:16px 26px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-margin-right:10px;
-}
-
-.telegram{
-background:#2AABEE;
-color:white;
-}
-
-.whatsapp{
-background:#25D366;
-color:white;
-}
-
-.section{
-margin-top:100px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-margin-top:40px;
-}
-
-.card{
-background:#13283d;
-padding:30px;
-border-radius:12px;
-}
-
-.card h3{
-margin-top:0;
-}
-
-.example{
-background:#0f2235;
-padding:25px;
-border-radius:10px;
-margin-top:20px;
-}
-
-.footer{
-margin-top:100px;
-padding-top:40px;
-border-top:1px solid #20364d;
-color:#8fa4b7;
-font-size:14px;
-}
-
-.lang{
-cursor:pointer;
-color:#2AABEE;
-font-weight:bold;
-}
-
-@media(max-width:900px){
-
-.hero{
-grid-template-columns:1fr;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-}
-
-</style>
-
-<script>
-
-function setLang(lang){
-
-document.querySelectorAll("[data-it]").forEach(el=>{
-el.innerHTML = el.getAttribute("data-"+lang)
-})
-
-}
-
-</script>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-<nav>
+<div class="container header">
 
-<div class="logo">Nik Coach</div>
+<h2>Nik Coach</h2>
 
-<div class="nav-links">
-<span class="lang" onclick="setLang('it')">IT</span> |
-<span class="lang" onclick="setLang('en')">EN</span>
+<div class="contacts">
+<a href="mailto:info@nikcoach.it">info@nikcoach.it</a>
+<a href="https://t.me/NikCoachBot" target="_blank">@NikCoachBot</a>
+<a href="https://wa.me/393403369834" target="_blank">WhatsApp</a>
 </div>
 
-</nav>
+</div>
 
-<!-- HERO -->
+</header>
 
-<div class="hero">
 
-<div>
+<section class="hero container">
 
-<h1
-data-it="Leggi il mercato prima di decidere"
-data-en="Read the market before deciding"
->
-Leggi il mercato prima di decidere
-</h1>
+<div class="hero-text">
 
-<p
-data-it="Nik Coach non ti dà segnali. Ti aiuta a capire il contesto in cui stai operando."
-data-en="Nik Coach does not give signals. It helps you understand the market context."
->
-Nik Coach non ti dà segnali. Ti aiuta a capire il contesto in cui stai operando.
+<h1>Leggi il mercato prima di decidere</h1>
+
+<p>
+Nik Coach non ti dà segnali.<br>
+Ti dice in che contesto stai operando.
 </p>
 
-<div class="features">
+<ul>
 
-<p>✔ Regime di mercato</p>
-<p>✔ Clima tra gli asset</p>
-<p>✔ Struttura multi-timeframe</p>
+<li>Regime di mercato</li>
+<li>Clima tra gli asset</li>
+<li>Struttura multi-timeframe</li>
 
-</div>
+</ul>
 
-<div class="cta">
-
-<a class="button telegram"
-href="https://t.me/NikCoachBot?start=landing"
-target="_blank"
-data-it="Prova gratis su Telegram"
-data-en="Try it free on Telegram"
->
-Prova gratis su Telegram
-</a>
-
-<a class="button whatsapp"
-href="https://wa.me/393403369834?text=Ciao%20vorrei%20informazioni%20su%20Nik%20Coach"
-target="_blank"
-data-it="Contattaci su WhatsApp"
-data-en="Contact us on WhatsApp"
->
-Contattaci su WhatsApp
+<a class="cta" href="https://t.me/NikCoachBot" target="_blank">
+Prova gratis 30 giorni su Telegram
 </a>
 
 </div>
 
-</div>
+<div class="hero-img">
 
-<div>
-
-<img src="https://i.imgur.com/4YQZ4sL.png" style="width:100%;border-radius:12px">
+<img src="images/nik.png">
 
 </div>
 
-</div>
+</section>
 
-<!-- COS'E -->
 
-<div class="section">
+<section class="container grid">
 
-<h2
-data-it="Cos'è Nik Coach"
-data-en="What is Nik Coach"
->
-Cos'è Nik Coach
-</h2>
+<div class="box">
 
-<div class="grid">
+<h3>Cos'è Nik Coach</h3>
 
-<div class="card">
-
-<p
-data-it="Nik è un sistema strutturale di lettura del mercato."
-data-en="Nik is a structural market reading system."
->
+<p>
 Nik è un sistema strutturale di lettura del mercato.
 </p>
 
-<p>✔ Regime dominante</p>
-<p>✔ Stress di mercato</p>
-<p>✔ Coerenza tra asset</p>
-<p>✔ Fase strutturale degli strumenti</p>
+<ul>
 
-<p
-data-it="Contesto aggiornato ogni 15 minuti."
-data-en="Context updated every 15 minutes."
->
-Contesto aggiornato ogni 15 minuti.
-</p>
+<li>Regime dominante</li>
+<li>Stress di mercato</li>
+<li>Coerenza tra asset</li>
+<li>Fase strutturale strumenti</li>
 
-</div>
-
-<div class="card">
-
-<h3
-data-it="Perché usarlo"
-data-en="Why use it"
->
-Perché usarlo
-</h3>
-
-<p
-data-it="Capisci quando il mercato è forte o fragile"
-data-en="Understand when the market is strong or fragile"
->
-Capisci quando il mercato è forte o fragile
-</p>
-
-<p
-data-it="Scopri quali asset guidano il movimento"
-data-en="Discover which assets are driving the move"
->
-Scopri quali asset guidano il movimento
-</p>
-
-<p
-data-it="Eviti operazioni contro trend"
-data-en="Avoid trading against the trend"
->
-Eviti operazioni contro trend
-</p>
-
-<p
-data-it="Sai quando è meglio aspettare"
-data-en="Know when it's better to wait"
->
-Sai quando è meglio aspettare
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ESEMPIO -->
-
-<div class="section">
-
-<h2
-data-it="Esempio di risposta"
-data-en="Example response"
->
-Esempio di risposta
-</h2>
-
-<div class="example">
-
-<p><b>Domanda</b></p>
-
-<p
-data-it="Che clima c'è sui mercati?"
-data-en="What is the current market climate?"
->
-Che clima c'è sui mercati?
-</p>
-
-<p><b>Nik</b></p>
-
-<p
-data-it="Il contesto mostra una struttura fragile. Gli asset difensivi stanno guidando il movimento e il mercato resta sensibile a shock macro."
-data-en="The context shows a fragile structure. Defensive assets are leading the move and the market remains sensitive to macro shocks."
->
-Il contesto mostra una struttura fragile. Gli asset difensivi stanno guidando il movimento.
-</p>
-
-</div>
-
-</div>
-
-<!-- CTA FINALE -->
-
-<div class="section">
-
-<h2
-data-it="Riceverai solo chiarezza"
-data-en="You will receive clarity only"
->
-Riceverai solo chiarezza
-</h2>
-
-<p
-data-it="Nessun segnale operativo. Solo contesto, sintesi e direzione."
-data-en="No trading signals. Only context, synthesis and direction."
->
-Nessun segnale operativo. Solo contesto, sintesi e direzione.
-</p>
-
-<a class="button telegram"
-href="https://t.me/NikCoachBot?start=landing"
-target="_blank"
-data-it="Apri Nik su Telegram"
-data-en="Open Nik on Telegram"
->
-Apri Nik su Telegram
-</a>
-
-</div>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-<p>Email: info@nikcoach.it</p>
-
-<p>Telegram: @NikCoachBot</p>
-
-<p>WhatsApp: +39 3403369834</p>
+</ul>
 
 <p>
-Nik Coach è un sistema digitale di supporto decisionale.
-Non fornisce consulenza finanziaria.
+Contesto aggiornato ogni 15 minuti
 </p>
 
 </div>
 
+
+<div class="box">
+
+<h3>Perché usare Nik</h3>
+
+<ul>
+
+<li>Capisci quando il mercato è forte o fragile</li>
+<li>Scopri quali asset guidano il movimento</li>
+<li>Eviti operazioni contro trend</li>
+<li>Sai quando è meglio aspettare</li>
+
+</ul>
+
 </div>
+
+</section>
+
+
+<section class="container how">
+
+<h2>Come funziona</h2>
+
+<div class="steps">
+
+<div>
+
+<h3>1</h3>
+<p>Scrivi una domanda su Telegram</p>
+
+</div>
+
+<div>
+
+<h3>2</h3>
+<p>Nik analizza il contesto</p>
+
+</div>
+
+<div>
+
+<h3>3</h3>
+<p>Ricevi una risposta strutturale</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container">
+
+<p>
+Riceverai solo chiarezza.<br>
+No entrate, target o segnali.
+</p>
+
+<p class="disclaimer">
+
+Nik Coach è un sistema digitale di supporto decisionale.<br>
+Non fornisce consulenza finanziaria.
+
+</p>
+
+</div>
+
+</footer>
 
 </body>
 </html>
