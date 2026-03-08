@@ -1,16 +1,11 @@
 body{
 
 margin:0;
-padding:0;
-
 font-family:Arial, Helvetica, sans-serif;
-
-background:#ffffff;
+background:white;
 
 }
 
-
-/* HEADER */
 
 .topbar{
 
@@ -29,19 +24,8 @@ border-bottom:1px solid #e6e6e6;
 
 .logo{
 
-display:flex;
-align-items:center;
-gap:10px;
-
 font-weight:bold;
 font-size:18px;
-
-}
-
-
-.logo img{
-
-height:32px;
 
 }
 
@@ -55,61 +39,9 @@ font-weight:bold;
 }
 
 
-
-/* HERO */
-
-.hero img{
+.landing img{
 
 width:100%;
 display:block;
-
-}
-
-
-
-/* SEO TEXT */
-
-.seo-text{
-
-max-width:900px;
-
-margin:auto;
-
-padding:40px 20px;
-
-line-height:1.6;
-
-text-align:center;
-
-}
-
-
-
-/* FOOTER IMAGE */
-
-.footer-image img{
-
-width:100%;
-display:block;
-
-}
-
-
-
-/* MOBILE */
-
-@media (max-width:768px){
-
-.topbar{
-
-padding:10px 20px;
-
-}
-
-.logo span{
-
-font-size:16px;
-
-}
 
 }
