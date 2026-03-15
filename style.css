@@ -339,4 +339,20 @@ height:20px;
 
 }
 
+ /* SEO TEXT (INVISIBILE PER UTENTI, VISIBILE PER GOOGLE) */
+
+.seo-text{
+
+max-width:900px;
+margin:0 auto;
+
+padding:0;
+
+font-size:0;
+line-height:0;
+
+color:transparent;
+
+} 
+
 }
