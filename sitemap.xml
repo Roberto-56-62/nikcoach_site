@@ -5,26 +5,31 @@
 <url>
 <loc>https://nikcoach.io/</loc>
 <priority>1.0</priority>
+<changefreq>weekly</changefreq>
 </url>
 
 <url>
 <loc>https://nikcoach.io/it.html</loc>
 <priority>0.9</priority>
+<changefreq>monthly</changefreq>
 </url>
 
 <url>
 <loc>https://nikcoach.io/en.html</loc>
 <priority>0.9</priority>
+<changefreq>monthly</changefreq>
 </url>
 
 <url>
 <loc>https://nikcoach.io/privacy.html</loc>
-<priority>0.6</priority>
+<priority>0.4</priority>
+<changefreq>yearly</changefreq>
 </url>
 
 <url>
 <loc>https://nikcoach.io/termini.html</loc>
-<priority>0.6</priority>
+<priority>0.4</priority>
+<changefreq>yearly</changefreq>
 </url>
 
 </urlset>
